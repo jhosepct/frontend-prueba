@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Covid World</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/c6b2c9c87c.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script src="js/slider.js"></script>
+</head>
+<body>
+    <header class="encabezado">
+        <!--Ventanas emergentes-->
+        <div class="venta-emergente">
+            <div class="escurecer" id="escurecer"></div>
+            <div class="emergente" id="sintomas">
+                <h1>Síntomas</h1>
+                <a href="javascript:closeSintomas()">
+                    <img src="img/close.png" alt="">
+                </a>
+                <p>La COVID-19 afecta de distintas maneras en función de cada persona. La mayoría de las personas
+                    que se contagian presentan síntomas de intensidad leve o moderada, y se recuperan sin necesidad de hospitalización.
+                </p>
+                <hr>
+                <p>Los síntomas más habituales son los siguientes:</p>
+                <ul>
+                    <li>Fiebre</li>
+                    <li>Tos seca</li>
+                    <li>Cansancio</li>
+                </ul>
+                <p>Otros síntomas menos comunes son los siguientes:</p>
+                <ul>
+                    <li>Molestias y dolores</li>
+                    <li>Dolor de garganta</li>
+                    <li>Diarrea</li>
+                    <li>Conjuntivitis</li>
+                    <li>Dolor de cabeza</li>
+                    <li>Pérdida del sentido del olfato o del gusto</li>
+                    <li>Erupciones cutáneas o pérdida del color en los dedos de las manos o de los pies</li>
+                </ul>
+            </div>
+            <div class="emergente" id="prevencion">
+                <h1>Prevención</h1>
+                <a href="javascript:closePrevencion()">
+                    <img src="img/close.png" alt="">
+                </a>
+                <p>Protéjase a sí mismo y a quienes lo rodean informándose y
+                    tomando las precauciones adecuadas. Siga los consejos de su
+                    organismo de salud pública local.</p>
+                <hr>
+                <p>Para evitar la propagación de la COVID-19:</p>
+                <ul>
+                    <li>Lávese las manos con frecuencia. Use agua y jabón o un desinfectante de manos a base de alcohol.</li>
+                    <li>Manténgase a una distancia segura de cualquier persona que tosa o estornude.</li>
+                    <li>No se toque los ojos, la nariz o la boca.</li>
+                    <li>Cuando tosa o estornude, cúbrase la nariz y la boca con el codo flexionado o con un pañuelo.</li>
+                    <li>Quédese en casa si se siente mal.</li>
+                    <li>Si tiene fiebre, tos y dificultad para respirar, solicite atención médica. Llame con antelación.</li>
+                    <li>Siga las instrucciones de su organismo sanitario local.</li>
+                </ul>
+                <p>Evitar las visitas innecesarias a los centros de atención médica permite que los sistemas sanitarios funcionen con mayor eficacia, lo que redunda en su protección y en la de los demás.</p>
+            </div>
+            <div class="emergente" id="tratamientos">
+                <h1>Tratamientos</h1>
+                <a href="javascript:closeTratamientos()">
+                    <img src="img/close.png" alt="">
+                </a>
+                <p>Hasta la fecha, no hay vacunas o medicamentos específicos contra la COVID-19. Se están investigando tratamientos, que serán probados en ensayos clínicos.
+                    <a href="https://www.who.int/es" target="_blank">Organización Mundial de la Salud</a>
+                </p>
+                <h2>Cuidado personal</h2>
+                <p>Si se siente enfermo debe descansar, beber mucho líquido y comer alimentos nutritivos. Permanezca en una habitación separada de los demás miembros de la familia y utilice un baño exclusivamente para usted si es posible. Limpie y desinfecte frecuentemente las superficies que toque.</p>
+                <p>Todas las personas deben mantener un estilo de vida saludable en casa. Lleve una dieta saludable, duerma, manténgase activo y establezca contacto social con los seres queridos a través del teléfono o internet. Los niños necesitan dosis adicionales de cariño y atención de los adultos durante los momentos difíciles. Mantenga rutinas y horarios regulares en la medida de lo posible.</p>
+                <p>Es normal sentirse triste, estresado o confundido durante una crisis. Hablar con personas en las que confíe, como amigos y familiares, le puede ayudar. Si se siente abrumado, hable con un trabajador de la salud o un consejero.</p>
+                <h2>Tratamientos médicos</h2>
+                <p>Si tiene síntomas leves y, por lo demás, está sano, aíslese y póngase en contacto con su proveedor de atención médica o con una línea de información sobre la COVID‑19 para recibir asesoramiento.</p>
+                <p>Solicite atención médica si tiene fiebre, tos y dificultad para respirar. Llame con antelación.</p>
+            </div>
+        </div>
+        <script src="js/ventanaEmergente.js"></script>
+        <!--Menu-->
+        <div class="cabecera">
+            <nav class="menu">
+                <ul>
+                    <li class="inicio">
+                        <a href="#"><span>Inicio</span></a>
+                    </li>
+                    <li class="datos-estadistcos">
+                        <a href="#"><span>Datos Estadisticos</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span>Contacto</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="datos">
+            <div class="title"><h3>Todos los países</h3></div>
+            <div class="slider">
+                <div class="confirmados">
+                    <div class="date">
+                        <h4>Confirmados</h4>
+                        <p>9,440,535</p>
+                    </div>
+                    <div class="icono">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                </div>
+                <div class="recuperados">
+                    <div class="date">
+                        <h4>Recuperados</h4>
+                        <p>4,764,577</p>
+                    </div>
+                    <div class="icono">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                </div>
+                <div class="fallecidos">
+                    <div class="date">
+                        <h4>Fallecidos</h4>
+                        <p>483,207</p>
+                    </div>
+                    <div class="icono">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!--<div class="diseño2"></div>-->
+        <div class="mobile-informacion">
+            <div class="diseño1"></div>
+            <!--Información Covid-->
+            <div class="informacion">
+                <!--<div class="circulo">
+                    <img src="img/ouroboros.png" alt="">
+                </div>-->
+                <div class="informacion-ipone">
+                    <img src="img/iphoneBlanco2.png" alt="">
+                </div>
+                <div class="contenido-informacion">
+
+                    <a href="https://www.who.int/es/emergencies/diseases/novel-coronavirus-2019/advice-for-public/q-a-coronaviruses#:~:text=tratamiento" target="_blank">
+                        <p>Información sanitaria</p>
+                    </a>
+                    <div class="sintomas" >
+                        <a href="javascript:openSintomas()">Síntomas</a>
+                    </div>
+                    <div class="prevencion">
+                        <a href="javascript:openPrevencion()">Prevención</a>
+                    </div>
+                    <div class="tratamientos">
+                        <a href="javascript:openTratamientos()">Tratamientos</a>
+                    </div>
+                </div>
+                <div class="covid">
+                    <!--<div class="logoCovid">
+                        <img src="img/8.png" class="spin" alt="">
+                    </div>-->
+                    <div class="dateCovidWorld">
+                        <div class="cases">
+                            <div class="primero">
+                                <p>8.746.238</p>
+                                <hr>
+                            </div>
+                            <div class="segundo">
+                                <p><span>CONFIRMED CASES</span> <br>
+                                    IN THE WORLD</p>
+                            </div>
+                        </div>
+                        <div class="death">
+                            <div class="primero">
+                                <p>461.772</p>
+                                <hr>
+                            </div>
+                            <div class="segundo">
+                                <p>DEATHS</p>
+                            </div>
+                        </div>
+                        <div class="casescountry">
+                            <div class="primero">
+                                <p>215</p>
+                                <hr>
+                            </div>
+                            <div class="segundo">
+                                <p><span>COUNTRIES AREAS OR <br>
+                        TERRITORIES WITH <br></span>
+                                    CONFIRMED CASES </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Mapa-->
+        <div class="mapa">
+            <div>
+                <img src="img/mapamundi.png" alt="">
+            </div>
+        </div>
+        <!--Imagenes-->
+        <div class="imagenes">
+            <img class="img1" src="img/1.png" alt="" >
+            <img class="img2" src="img/4.png" alt="">
+        </div></div>
+    </header>
+
+    <section>
+
+        <div class="chart-world">
+            <div class="tabla-pie">
+                <canvas id="myChart4" width="200" height="200"></canvas>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="js/chartWorld.js"></script>
+</body>
+</html>
